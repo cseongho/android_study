@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                             R.drawable.mov04, R.drawable.mov05, R.drawable.mov06,
                             R.drawable.mov07, R.drawable.mov08, R.drawable.mov09, R.drawable.mov10};
 
+        String[] posterName = {"토이스토리", "호빗", "제이슨 본", "반지의 제왕", "정직한 후보", "나쁜 녀셕들", "겨울왕국", "알라딘", "극한직업", "스파이더맨",
+                                "토이스토리", "호빗", "제이슨 본", "반지의 제왕", "정직한 후보", "나쁜 녀셕들", "겨울왕국", "알라딘", "극한직업", "스파이더맨",
+                                "토이스토리", "호빗", "제이슨 본", "반지의 제왕", "정직한 후보", "나쁜 녀셕들", "겨울왕국", "알라딘", "극한직업", "스파이더맨",
+                                "토이스토리", "호빗", "제이슨 본", "반지의 제왕", "정직한 후보", "나쁜 녀셕들", "겨울왕국", "알라딘", "극한직업", "스파이더맨"};
+
         public View getView(int position, View convertView, ViewGroup parent) {
             ImageView imageview = new ImageView(context);
             imageview.setLayoutParams(new GridView.LayoutParams(200, 300));
@@ -74,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
                     ImageView ivPoster = (ImageView) dialogView.findViewById(R.id.ivPoster);
                     ivPoster.setImageResource(posterID[pos]);
-                    dlg.setTitle("큰 포스터");
+                    dlg.setTitle(posterName[pos]);
                     dlg.setIcon(R.drawable.ic_launcher_foreground);
                     dlg.setView(dialogView);
                     dlg.setNegativeButton("닫기",null);
